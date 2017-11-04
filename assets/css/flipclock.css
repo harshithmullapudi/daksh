@@ -204,6 +204,7 @@
   right: -86px;
   color: white;
   font-size: 150%;
+    font-weight: bold;
   text-shadow: none; }
 
 .flip-clock-divider.minutes .flip-clock-label {
