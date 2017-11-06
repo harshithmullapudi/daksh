@@ -1,4 +1,9 @@
 (function($){
+$(".register").click(function () {
+
+    console.log("something")
+    $('#myModal').modal('show')
+})
     /* -----------------------------
     Events
      */
@@ -11,8 +16,8 @@
             var thisCard = $(this);
             var thisFlipper = thisCard.find('.card__flipper');
             var offset = thisCard.offset();
-            var xc = win.width() / 2;
-            var yc = win.height() / 2;
+            var xc = win.width() / 1.8;
+            var yc = win.height() / 2.5;
             var docScroll = $(document).scrollTop();
             var cardW = thisCard.outerWidth() / 2;
             var cardH = thisCard.height() / 2;
@@ -354,40 +359,6 @@
             });
         }
 
-        /* ---------------------------------------------- /*
-         * Portfolio
-         /* ---------------------------------------------- */
-
-        var worksgrid_mode;
-        if (worksgrid.hasClass('works-grid-masonry')) {
-            worksgrid_mode = 'masonry';
-        } else {
-            worksgrid_mode = 'fitRows';
-        }
-
-        worksgrid.imagesLoaded(function() {
-            worksgrid.isotope({
-                layoutMode: worksgrid_mode,
-                itemSelector: '.work-item',
-            });
-        });
-
-        $('#filters a').click(function() {
-            $('#filters .current').removeClass('current');
-            $(this).addClass('current');
-            var selector = $(this).attr('data-filter');
-
-            worksgrid.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-
-            return false;
-        });
 
         /* ---------------------------------------------- /*
          * Post slider
@@ -424,7 +395,7 @@
          /* ---------------------------------------------- */
 
         wow = new WOW({
-            mobile: false
+            mobile: true
         });
         wow.init();
 

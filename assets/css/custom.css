@@ -4,3 +4,10 @@
 
     color: black!important;
 }
+button {
+    border-radius: 0 !important;
+}
+.form-control
+{
+text-transform: none!important;
+}

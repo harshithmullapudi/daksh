@@ -24,7 +24,9 @@
 .card:nth-child(3) {
     margin-right: 0;
 }
-
+.card:nth-child(4) {
+    margin-left: 20%!important;
+}
 .card:last-child {
     margin-right: 0;
 }
@@ -49,6 +51,7 @@
 .card__back {
     transform: rotateY(180deg) scale(1.1);
     padding: 10%;
+    width:200%!important;
     background: white;
     display: flex;
     color: black;
@@ -90,6 +93,9 @@
     }
     .card .card__front, .card .card__back {
         height: 290px;
+    }
+    .card__back{
+        width: 100%!important;
     }
 }
 main {
