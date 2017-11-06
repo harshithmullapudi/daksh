@@ -1,4 +1,14 @@
 (function($){
+    $(document).ready(function(){
+        $('.bxslider').bxSlider({
+            auto: true,
+            autoControls: false,
+            stopAutoOnClick: false,
+            pager: false,
+            shrinkItems: true
+
+        });
+    });
 $(".register").click(function () {
 
     console.log("something")
