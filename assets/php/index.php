@@ -19,14 +19,4 @@ $sub .= $id;
     $email->AddAttachment('outreach.pdf' );
     $email->Send();
 
-
-
-
-
-
-
-
-
-
-
     ?>	
