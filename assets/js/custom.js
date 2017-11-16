@@ -1,4 +1,30 @@
+
 (function($){
+
+    $.ajax({
+        url : "assets/php/index.php",
+        type:"get",
+        data : {
+            email: "harshithmullapudi@gmail.com",
+            name: "SDf",
+            mobilenum: "987987",
+            events: "asdfasdf",
+            id : "8979876"
+
+        },
+        success:function (data) {
+            console.log(data)
+        }
+    })
+    var config = {
+        apiKey: "AIzaSyAI6BS_mYTXKkxjMWxecpsqid_fTywxDRU",
+        authDomain: "marketer-a09ee.firebaseapp.com",
+        databaseURL: "https://marketer-a09ee.firebaseio.com",
+        projectId: "marketer-a09ee",
+        storageBucket: "marketer-a09ee.appspot.com",
+        messagingSenderId: "1084315308610"
+    };
+    firebase.initializeApp(config);
     $(document).ready(function(){
         $('.bxslider').bxSlider({
             auto: true,
@@ -14,6 +40,79 @@ $(".register").click(function () {
     console.log("something")
     $('#myModal').modal('show')
 })
+    
+    
+    /*----------------------------
+    register
+    
+     */
+    $("#registers").click(function() {
+        console.log("yes")
+        var email = $("#regemail").val()
+        var name = $("#regname").val()
+        var mobilenum = $("#regmobile").val()
+        var events = []
+        var eventlist = ["spardha","spectra","robowars","gamingevent","hackathon"]
+        eventlist.forEach(function (e) {
+            if($("." + e).is(':checked'))
+            {
+                events.push(e)
+            }
+        })
+        if(email && name && mobilenum && events.length>0) {
+            firebase.auth().createUserWithEmailAndPassword(email, "daksh2018").then(function () {
+                var id = Math.floor((Math.random() * 10) + 1);
+                firebase.database().ref("dakshdetails").push({
+                    email: email,
+                    name: name,
+                    mobilenum: mobilenum,
+                    events: events,
+                    id: id
+                })
+                $(".ermessage").empty()
+                var str = '<div class="alert alert-success alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Success!</strong> You have registered please check your mail.</div>'
+                $(".ermessage").append(str)
+                $("#regemail").val("")
+                $("#regname").val("")
+                $("#regmobile").val("")
+                var eventlist = ["spardha", "spectra", "robowars", "gamingevent", "hackathon"]
+                eventlist.forEach(function (e) {
+                    $("." + e).attr('checked', false)
+
+                })
+                $.ajax({
+                    url : "php/index.php",
+                    data : {
+                        email: email,
+                        name: name,
+                        mobilenum: mobilenum,
+                        events: events,
+                        id : id
+
+                    },
+                    success:function (data) {
+                        console.log(data)
+                    }
+                })
+            }).catch(function (error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                $(".ermessage").empty()
+                var str = '<div class="alert alert-danger alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong> Warning! </strong>' + " " + errorMessage + " " + ' </div>'
+                $(".ermessage").append(str)
+            })
+        }
+        else
+        {
+            $(".ermessage").empty()
+            var str = '<div class="alert alert-danger alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong> Warning! </strong> Please fill all the details. </div>'
+            $(".ermessage").append(str)
+        }
+    })
+
+
+
     /* -----------------------------
     Events
      */
