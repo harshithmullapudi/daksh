@@ -1,21 +1,7 @@
 
 (function($){
 
-    $.ajax({
-        url : "assets/php/index.php",
-        type:"get",
-        data : {
-            email: "harshithmullapudi@gmail.com",
-            name: "SDf",
-            mobilenum: "987987",
-            events: "asdfasdf",
-            id : "8979876"
 
-        },
-        success:function (data) {
-            console.log(data)
-        }
-    })
     var config = {
         apiKey: "AIzaSyAI6BS_mYTXKkxjMWxecpsqid_fTywxDRU",
         authDomain: "marketer-a09ee.firebaseapp.com",
@@ -40,8 +26,51 @@ $(".register").click(function () {
     console.log("something")
     $('#myModal').modal('show')
 })
-    
-    
+
+    $("#dcaregisters").click(function() {
+        console.log("yes")
+        var email = $("#regemail").val()
+        var name = $("#regname").val()
+        var mobilenum = $("#regmobile").val()
+        var collegename = $("#regcollegename").val()
+        var regsize = $("#regsize").val()
+        if(email && name && mobilenum && collegename) {
+            firebase.auth().createUserWithEmailAndPassword(email, "daksh2018").then(function () {
+                var id = Math.floor((Math.random() * 10) + 1);
+                firebase.database().ref("dcadetails").push({
+                    email: email,
+                    name: name,
+                    mobilenum: mobilenum,
+                    collegename : collegename,
+                    id: id
+                })
+                $(".ermessage").empty()
+                var str = '<div class="alert alert-success alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Success!</strong> You have registered please check your mail.</div>'
+                $(".ermessage").append(str)
+                $("#regemail").val("")
+                $("#regname").val("")
+                $("#regmobile").val("")
+                $("#regcollegename").val("")
+                $("#regsize").val("")
+            }).catch(function (error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                $(".ermessage").empty()
+                var str = '<div class="alert alert-danger alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong> Warning! </strong>' + " " + errorMessage + " " + ' </div>'
+                $(".ermessage").append(str)
+            })
+        }
+        else
+        {
+            $(".ermessage").empty()
+            var str = '<div class="alert alert-danger alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong> Warning! </strong> Please fill all the details. </div>'
+            $(".ermessage").append(str)
+        }
+        setTimeout(function () {
+            $(".ermessage").empty()
+        },10000)
+    })
     /*----------------------------
     register
     
@@ -51,6 +80,7 @@ $(".register").click(function () {
         var email = $("#regemail").val()
         var name = $("#regname").val()
         var mobilenum = $("#regmobile").val()
+        var regsize = $("#regsize").val()
         var events = []
         var eventlist = ["spardha","spectra","robowars","gamingevent","hackathon"]
         eventlist.forEach(function (e) {
@@ -75,13 +105,14 @@ $(".register").click(function () {
                 $("#regemail").val("")
                 $("#regname").val("")
                 $("#regmobile").val("")
+                $("#regsize").val("")
                 var eventlist = ["spardha", "spectra", "robowars", "gamingevent", "hackathon"]
                 eventlist.forEach(function (e) {
                     $("." + e).attr('checked', false)
 
                 })
                 $.ajax({
-                    url : "php/index.php",
+                    url : "assets/php/index.php",
                     data : {
                         email: email,
                         name: name,
@@ -109,6 +140,9 @@ $(".register").click(function () {
             var str = '<div class="alert alert-danger alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong> Warning! </strong> Please fill all the details. </div>'
             $(".ermessage").append(str)
         }
+        setTimeout(function () {
+            $(".ermessage").empty()
+        },10000)
     })
 
 

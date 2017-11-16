@@ -10,6 +10,7 @@ button {
 .form-control
 {
 text-transform: none!important;
+    border-radius: 0!important;
 }
 .navhead{
     font-family: 'Inconsolata', sans-serif;
