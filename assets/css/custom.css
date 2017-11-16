@@ -11,3 +11,9 @@ button {
 {
 text-transform: none!important;
 }
+.navhead{
+    font-family: 'Inconsolata', sans-serif;
+}
+.heads{
+    font-family: 'Kaushan Script', cursive;
+}
