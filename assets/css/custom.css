@@ -18,3 +18,9 @@ text-transform: none!important;
 .heads{
     font-family: 'Kaushan Script', cursive;
 }
+@media (max-width: 900px) {
+    .navbar-brand.boxback
+    {
+        padding: 0!important;
+    }
+}

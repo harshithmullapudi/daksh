@@ -1,7 +1,17 @@
 
 (function($){
 
-
+var intid = setInterval(function () {
+    if($("iframe").length > 0)
+    {
+        $("iframe").css({
+            "width" : "100%",
+            "height" : "100%",
+            "margin-top" : "0",
+            "margin-left" : "0"
+        })
+    }
+},1000)
     var config = {
         apiKey: "AIzaSyAI6BS_mYTXKkxjMWxecpsqid_fTywxDRU",
         authDomain: "marketer-a09ee.firebaseapp.com",
@@ -21,6 +31,43 @@
 
         });
     });
+
+
+
+    /*-------- contact -------
+
+     */
+    $(".contactquery").click(function (e) {
+        e.preventDefault()
+        console.log("query")
+        var email = $("#email").val()
+        var name = $("#name").val()
+        var query = $("#query").val()
+        if(email && name && query) {
+            firebase.database().ref("contactquery").push({
+                email: email,
+                name: name,
+                query: query
+            })
+            $(".contactmessage").empty()
+            var str = '<div class="alert alert-success alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Success!</strong> Will contact you soon.</div>'
+            $(".contactmessage").append(str)
+            $("#email").val("")
+            $("#name").val("")
+            $("#query").val("")
+        }
+        else
+        {
+            $(".contactmessage").empty()
+            var str = '<div class="alert alert-danger alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> Please fill all the details.</div>'
+            $(".contactmessage").append(str)
+        }
+        setTimeout(function () {
+            $(".contactmessage").empty()
+        },10000)
+    })
+
+
 $(".register").click(function () {
 
     console.log("something")
@@ -42,7 +89,8 @@ $(".register").click(function () {
                     name: name,
                     mobilenum: mobilenum,
                     collegename : collegename,
-                    id: id
+                    id: id,
+                    size : regsize
                 })
                 $(".ermessage").empty()
                 var str = '<div class="alert alert-success alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Success!</strong> You have registered please check your mail.</div>'
@@ -81,8 +129,10 @@ $(".register").click(function () {
         var name = $("#regname").val()
         var mobilenum = $("#regmobile").val()
         var regsize = $("#regsize").val()
+        var regcollegename = $("#regcolname").val()
+        var collegeresgistration = $("#regcolregno").val()
         var events = []
-        var eventlist = ["spardha","spectra","robowars","gamingevent","hackathon"]
+        var eventlist = ["spardha","spectra","robowars","gamingevent"]
         eventlist.forEach(function (e) {
             if($("." + e).is(':checked'))
             {
@@ -97,7 +147,10 @@ $(".register").click(function () {
                     name: name,
                     mobilenum: mobilenum,
                     events: events,
-                    id: id
+                    id: id,
+                    collegename : regcollegename,
+                    collegeid:collegeresgistration,
+                    size:regsize
                 })
                 $(".ermessage").empty()
                 var str = '<div class="alert alert-success alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Success!</strong> You have registered please check your mail.</div>'
@@ -106,7 +159,9 @@ $(".register").click(function () {
                 $("#regname").val("")
                 $("#regmobile").val("")
                 $("#regsize").val("")
-                var eventlist = ["spardha", "spectra", "robowars", "gamingevent", "hackathon"]
+                $("#regcolname").val("")
+                $("#regcolregno").val("")
+                var eventlist = ["spardha", "spectra", "robowars", "gamingevent"]
                 eventlist.forEach(function (e) {
                     $("." + e).attr('checked', false)
 
@@ -118,7 +173,10 @@ $(".register").click(function () {
                         name: name,
                         mobilenum: mobilenum,
                         events: events,
-                        id : id
+                        id : id,
+                        collegename : regcollegename,
+                        collegeid:collegeresgistration,
+                        size:regsize
 
                     },
                     success:function (data) {
@@ -482,6 +540,9 @@ $(".register").click(function () {
             });
 
             $('.video-controls-box a').css('visibility', 'visible');
+            $(".playerBox").css({
+                margin : "0!important"
+            })
 
             $('#video-play').click(function(event) {
                 event.preventDefault();
