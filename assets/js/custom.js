@@ -2,16 +2,19 @@
 (function($){
 
 var intid = setInterval(function () {
+
     if($("iframe").length > 0)
     {
-        $("iframe").css({
-            "width" : "100%",
-            "height" : "100%",
-            "margin-top" : "0",
-            "margin-left" : "0"
-        })
+        var iframe = document.getElementsByTagName("iframe")
+        iframe[0].style.width = "100%"
+        iframe[0].style.height = "100%"
+        iframe[0].style.marginLeft = 0
+        iframe[0].style.marginTop = 0
+        
+
+
     }
-},1000)
+},2000)
     var config = {
         apiKey: "AIzaSyAI6BS_mYTXKkxjMWxecpsqid_fTywxDRU",
         authDomain: "marketer-a09ee.firebaseapp.com",
