@@ -42,7 +42,7 @@ text-transform: none!important;
 }
 @media (max-width: 900px) {
     .caption-content {
-        zoom: 50%;
+        zoom: 60%;
         padding: 0;
 
 
