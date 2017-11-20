@@ -13,14 +13,38 @@ text-transform: none!important;
     border-radius: 0!important;
 }
 .navhead{
-    font-family: 'Inconsolata', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
 }
 .heads{
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Times New Roman', cursive;
+}
+.caption-content {
+
+    padding: 5%;
+    vertical-align: bottom !important;
+
 }
 @media (max-width: 900px) {
     .navbar-brand.boxback
     {
-        padding: 0!important;
+        padding: 2%!important;
+    }
+
+
+}
+@media (max-width: 1200px) {
+    .caption-content {
+        zoom: 70%;
+        padding: 0;
+
+
+    }
+}
+@media (max-width: 900px) {
+    .caption-content {
+        zoom: 50%;
+        padding: 0;
+
+
     }
 }
