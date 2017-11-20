@@ -10,7 +10,7 @@ var intid = setInterval(function () {
         iframe[0].style.height = "100%"
         iframe[0].style.marginLeft = 0
         iframe[0].style.marginTop = 0
-        
+
 
 
     }
@@ -84,6 +84,7 @@ $(".register").click(function () {
         var mobilenum = $("#regmobile").val()
         var collegename = $("#regcollegename").val()
         var regsize = $("#regsize").val()
+        var regno = $("#regno").val()
         if(email && name && mobilenum && collegename) {
             firebase.auth().createUserWithEmailAndPassword(email, "daksh2018").then(function () {
                 var id = Math.floor((Math.random() * 10) + 1);
@@ -103,6 +104,7 @@ $(".register").click(function () {
                 $("#regmobile").val("")
                 $("#regcollegename").val("")
                 $("#regsize").val("")
+                $("#regno").val("")
             }).catch(function (error) {
                 // Handle Errors here.
                 var errorCode = error.code;
