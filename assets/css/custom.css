@@ -20,8 +20,8 @@ text-transform: none!important;
 }
 .caption-content {
 
-    padding: 5%;
-    vertical-align: bottom !important;
+    padding-top: 10%;
+    vertical-align: top !important;
 
 }
 @media (max-width: 900px) {
@@ -34,16 +34,17 @@ text-transform: none!important;
 }
 @media (max-width: 1200px) {
     .caption-content {
-        zoom: 70%;
-        padding: 0;
 
+        padding-top: 10%;
+        vertical-align: top !important;
 
     }
 }
 @media (max-width: 900px) {
     .caption-content {
+
         zoom: 60%;
-        padding: 0;
+        vertical-align: middle !important;
 
 
     }
