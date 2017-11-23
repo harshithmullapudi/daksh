@@ -3,6 +3,9 @@
 
 var intid = setInterval(function () {
 
+    var direct = function (str) {
+        window.location = str
+    }
     if($("iframe").length > 0)
     {
         var iframe = document.getElementsByTagName("iframe")
