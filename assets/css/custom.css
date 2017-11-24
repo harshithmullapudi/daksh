@@ -13,10 +13,13 @@ text-transform: none!important;
     border-radius: 0!important;
 }
 .navhead{
-    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Maiandra GD Regular', cursive;
+}
+.ca.navhead{
+    font-family: 'HTOWERTI', cursive;
 }
 .heads{
-    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Maiandra GD Regular', cursive;
 }
 .caption-content {
 
