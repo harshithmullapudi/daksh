@@ -158,7 +158,9 @@
   text-align: center;
   background-color: white;
   border-radius: 0px;
-  font-size: 70px; }
+  font-size: 70px;
+  font-family: 'Alfa Slab One', cursive;
+}
 
 .flip-clock-wrapper ul li a div.up div.inn {
   top: 0; }
@@ -204,7 +206,7 @@
   right: -86px;
   color: white;
   font-size: 190%;
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Alfa Slab One', cursive;
     font-weight: bold;
   text-shadow: none; }
 
