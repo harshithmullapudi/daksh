@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="978e7645-24e1-440e-b915-e0f0dde4aa67" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/custom.css" afterPath="$PROJECT_DIR$/assets/css/custom.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/font.css" afterPath="$PROJECT_DIR$/assets/css/font.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dca/index.html" afterPath="$PROJECT_DIR$/dca/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,8 +78,8 @@
       <file leaf-file-name="font.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/font.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            <state relative-caret-position="110">
+              <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -121,8 +118,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dca/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="82" column="60" lean-forward="false" selection-start-line="82" selection-start-column="60" selection-end-line="82" selection-end-column="60" />
+            <state relative-caret-position="322">
+              <caret line="256" column="13" lean-forward="false" selection-start-line="256" selection-start-column="13" selection-end-line="256" selection-end-column="13" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#main#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -210,7 +207,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nav</find>
       <find>inpu</find>
       <find>loader</find>
       <find>open</find>
@@ -236,10 +232,11 @@
       <find>sans-serif</find>
       <find>Inconsolata</find>
       <find>150</find>
-      <find>http</find>
       <find>font-family</find>
       <find>font-family:</find>
       <find>130</find>
+      <find>Monotype Corsiva</find>
+      <find>http</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -291,8 +288,8 @@
         <option value="$PROJECT_DIR$/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/assets/css/font.css" />
         <option value="$PROJECT_DIR$/dca/index.html" />
+        <option value="$PROJECT_DIR$/assets/css/font.css" />
       </list>
     </option>
   </component>
@@ -858,12 +855,12 @@
       <workItem from="1510825045723" duration="14944000" />
       <workItem from="1510930388283" duration="16870000" />
       <workItem from="1511195771198" duration="1866000" />
-      <workItem from="1511340167557" duration="7042000" />
+      <workItem from="1511340167557" duration="7309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75373000" />
+    <option name="totallyTimeSpent" value="75640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1924" height="1084" extended-state="0" />
@@ -1287,14 +1284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/font.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1349,10 +1338,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/font.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dca/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="82" column="60" lean-forward="false" selection-start-line="82" selection-start-column="60" selection-end-line="82" selection-end-column="60" />
+        <state relative-caret-position="322">
+          <caret line="256" column="13" lean-forward="false" selection-start-line="256" selection-start-column="13" selection-end-line="256" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#main#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
