@@ -9,17 +9,14 @@ button {
 }
 .form-control
 {
-text-transform: none!important;
+    text-transform: none!important;
     border-radius: 0!important;
 }
 .navhead{
-    font-family: 'Maiandra GD Regular', cursive;
-}
-.ca.navhead{
-    font-family: 'HTOWERTI', cursive;
+    font-family: 'Alfa Slab One', sans-serif;
 }
 .heads{
-    font-family: 'Maiandra GD Regular', cursive;
+    font-family: 'Alfa Slab One', cursive;
 }
 .caption-content {
 
