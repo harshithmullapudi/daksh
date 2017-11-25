@@ -555,8 +555,15 @@ $(".register").click(function () {
             $('#video-play').click(function(event) {
                 event.preventDefault();
                 if ($(this).hasClass('fa-play')) {
+
+                    $(".navbar-transparent").css({
+                        "padding-top" : "0!important"
+                    })
                     $('.video-player').playYTP();
                 } else {
+                    $(".navbar-transparent").css({
+                        "padding-top" : "2%!important"
+                    })
                     $('.video-player').pauseYTP();
                 }
                 $(this).toggleClass('fa-play fa-pause');
