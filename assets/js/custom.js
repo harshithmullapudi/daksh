@@ -88,6 +88,7 @@ $(".register").click(function () {
         var collegename = $("#regcollegename").val()
         var regsize = $("#regsize").val()
         var regno = $("#regno").val()
+
         if(email && name && mobilenum && collegename) {
             firebase.auth().createUserWithEmailAndPassword(email, "daksh2018").then(function () {
                 var id = Math.floor((Math.random() * 10) + 1);
@@ -97,7 +98,8 @@ $(".register").click(function () {
                     mobilenum: mobilenum,
                     collegename : collegename,
                     id: id,
-                    size : regsize
+                    size : regsize,
+                    regno : regno
                 })
                 $(".ermessage").empty()
                 var str = '<div class="alert alert-success alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Success!</strong> You have registered please check your mail.</div>'
@@ -108,6 +110,7 @@ $(".register").click(function () {
                 $("#regcollegename").val("")
                 $("#regsize").val("")
                 $("#regno").val("")
+
             }).catch(function (error) {
                 // Handle Errors here.
                 var errorCode = error.code;
@@ -139,6 +142,7 @@ $(".register").click(function () {
         var regsize = $("#regsize").val()
         var regcollegename = $("#regcolname").val()
         var collegeresgistration = $("#regcolregno").val()
+        var regvenue = $("#regvenue").val()
         var events = []
         var eventlist = ["spardha","spectra","robowars","gamingevent"]
         eventlist.forEach(function (e) {
@@ -158,7 +162,8 @@ $(".register").click(function () {
                     id: id,
                     collegename : regcollegename,
                     collegeid:collegeresgistration,
-                    size:regsize
+                    size:regsize,
+                    venue : regvenue
                 })
                 $(".ermessage").empty()
                 var str = '<div class="alert alert-success alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Success!</strong> You have registered please check your mail.</div>'
@@ -169,6 +174,7 @@ $(".register").click(function () {
                 $("#regsize").val("")
                 $("#regcolname").val("")
                 $("#regcolregno").val("")
+                $("#regvenue").val("")
                 var eventlist = ["spardha", "spectra", "robowars", "gamingevent"]
                 eventlist.forEach(function (e) {
                     $("." + e).attr('checked', false)
