@@ -245,7 +245,7 @@ $(".register").click(function () {
             if (card.hasClass('active')) unflip();
 
             thisCard.css({'z-index': '3'}).addClass('active');
-
+            transY=0
             thisFlipper.css({
                 'transform': 'translate3d(' + transX + 'px,' + transY + 'px, 0) rotateY(180deg) scale(1)',
                 '-webkit-transform': 'translate3d(' + transX + 'px,' + transY + 'px, 0) rotateY(180deg) scale(1)',
