@@ -430,15 +430,15 @@
 
 
                         </form>
+                        <div class="g-recaptcha" data-sitekey="6Ld40zsUAAAAAJCwN5guHqzkqf_p-ONtdixt_6Bf" data-callback="disab"></div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-                <button type="button" class="btn btn-primary g-recaptcha"
-                        data-sitekey="6Lfi0jsUAAAAAOwSl4gK_bVRTPXl8sQBp29FHglz"
-                        data-callback="regis" >Register</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary disabled" id="registers" >Register</button>
+
             </div>
         </div>
     </div>
@@ -474,6 +474,12 @@
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+    var disab = function () {
+        $("#registers").removeClass("disabled")
+    }
+
+</script>
 <!--<script src="assets/js/contact.js"></script>-->
 <script src="assets/js/flipclock.min.js"></script>
 <script src="assets/js/custom.js"></script>

@@ -1,6 +1,4 @@
-function regis() {
-    console.log("asdfasdf")
-}
+
 (function($){
 
 var intid = setInterval(function () {
@@ -75,14 +73,16 @@ var intid = setInterval(function () {
         },10000)
     })
 
-
+var disab = function () {
+    $("#registers").removeClass("disabled")
+}
 $(".register").click(function () {
 
     console.log("something")
     $('#myModal').modal('show')
 })
 
-   var dcaregis = function() {
+    $("#dcaregisters").click(function() {
         console.log("yes")
         var email = $("#regemail").val()
         var name = $("#regname").val()
@@ -103,6 +103,7 @@ $(".register").click(function () {
                     size : regsize,
                     regno : regno
                 })
+                $("#dcaregisters").addClass("disabled")
                 $(".ermessage").empty()
                 var str = '<div class="alert alert-success alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Success!</strong> You have registered please check your mail.</div>'
                 $(".ermessage").append(str)
@@ -131,13 +132,12 @@ $(".register").click(function () {
         setTimeout(function () {
             $(".ermessage").empty()
         },10000)
-    }
+    })
     /*----------------------------
     register
     
      */
-
-   var regiss  = function() {
+    $("#registers").click(function() {
         console.log("yes")
         var email = $("#regemail").val()
         var name = $("#regname").val()
@@ -168,6 +168,7 @@ $(".register").click(function () {
                     size:regsize,
                     venue : regvenue
                 })
+                $("#registers").addClass("disabled")
                 $(".ermessage").empty()
                 var str = '<div class="alert alert-success alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Success!</strong> You have registered please check your mail.</div>'
                 $(".ermessage").append(str)
@@ -218,7 +219,7 @@ $(".register").click(function () {
         setTimeout(function () {
             $(".ermessage").empty()
         },10000)
-    }
+    })
 
 
 
