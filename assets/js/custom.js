@@ -1,4 +1,6 @@
-
+function regis() {
+    console.log("asdfasdf")
+}
 (function($){
 
 var intid = setInterval(function () {
@@ -134,9 +136,7 @@ $(".register").click(function () {
     register
     
      */
-    var regis  = function() {
-        console.log("asdfasdf")
-    }
+
    var regiss  = function() {
         console.log("yes")
         var email = $("#regemail").val()
