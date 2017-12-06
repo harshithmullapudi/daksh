@@ -80,7 +80,7 @@ $(".register").click(function () {
     $('#myModal').modal('show')
 })
 
-    $("#dcaregisters").click(function() {
+   var dcaregis = function() {
         console.log("yes")
         var email = $("#regemail").val()
         var name = $("#regname").val()
@@ -129,12 +129,15 @@ $(".register").click(function () {
         setTimeout(function () {
             $(".ermessage").empty()
         },10000)
-    })
+    }
     /*----------------------------
     register
     
      */
-    $("#registers").click(function() {
+    var regis  = function() {
+        console.log("asdfasdf")
+    }
+   var regiss  = function() {
         console.log("yes")
         var email = $("#regemail").val()
         var name = $("#regname").val()
@@ -215,7 +218,7 @@ $(".register").click(function () {
         setTimeout(function () {
             $(".ermessage").empty()
         },10000)
-    })
+    }
 
 
 
@@ -291,7 +294,7 @@ $(".register").click(function () {
         var currentDate = new Date();
 
         // Set some date in the future. In this case, it's always Jan 1
-        var futureDate  = new Date("22febraury2018");
+        var futureDate  = new Date("2018-02-22".replace(/-/g, "/"));
 
         // Calculate the difference in seconds between the future and current date
         var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
@@ -301,6 +304,7 @@ $(".register").click(function () {
             clockFace: 'DailyCounter',
             countdown: true
         });
+        console.log(clock.start())
     });
     /* ---------------------------------------------- /*
      * Preloader
